@@ -4,23 +4,23 @@ module.exports = {
   theme: {
     colors: {
       brand: {
-        primary: 'rgb(38, 38, 38)',
-        secondary: 'rgb(0, 149, 246)',
+        primary: 'rgb(var(--clr-brand-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--clr-brand-secondary) / <alpha-value>)',
       },
       accent: {
-        primary: 'rgb(255, 255, 255)',
-        secondary: 'rgb(250, 250, 250)',
+        primary: 'rgb(var(--clr-accent-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--clr-accent-secondary) / <alpha-value>)',
       },
     },
     fontFamily: {
       'sans-serif': 'var(--ff-sans-serif)',
     },
     fontSize: {
-      base: '.875rem',
+      base: 'var(--fs-base)',
     },
     fontWeight: {
-      normal: 400,
-      medium: 500,
+      normal: 'var(--fw-normal)',
+      medium: 'var(--fw-medium)',
     },
     extend: {},
   },
