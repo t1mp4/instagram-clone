@@ -1,10 +1,18 @@
-import { type AppType } from "next/app";
-import { type Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
+import { type AppType } from 'next/app';
+import { type Session } from 'next-auth';
+import { SessionProvider } from 'next-auth/react';
 
-import { api } from "../utils/api";
+import { Roboto } from '@next/font/google';
 
-import "../styles/globals.css";
+import { api } from '../utils/api';
+
+import '../styles/globals.css';
+
+const roboto = Roboto({
+  weight: ['400', '500'],
+  style: ['normal'],
+  subsets: ['latin'],
+});
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -12,6 +20,13 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
+      <style jsx global>
+        {`
+          :root {
+            --ff-sans-serif: ${roboto.style.fontFamily};
+          }
+        `}
+      </style>
       <Component {...pageProps} />
     </SessionProvider>
   );
