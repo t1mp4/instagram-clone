@@ -18,6 +18,7 @@ module.exports = {
     },
     fontSize: {
       base: 'var(--fs-base)',
+      sm: 'var(--fs-sm)',
     },
     fontWeight: {
       normal: 'var(--fw-normal)',
