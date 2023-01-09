@@ -10,6 +10,7 @@ module.exports = {
       accent: {
         primary: 'rgb(var(--clr-accent-primary) / <alpha-value>)',
         secondary: 'rgb(var(--clr-accent-secondary) / <alpha-value>)',
+        tertiary: 'rgb(var(--clr-accent-tertiary) / <alpha-value>)',
       },
     },
     fontFamily: {
